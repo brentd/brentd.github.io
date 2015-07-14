@@ -1,0 +1,704 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+@mixin media($format) {
+  @if $format == mobile {
+    @media only screen and (max-width: 600px) { @content; }
+  }
+  @elseif $format == desktop {
+    @media only screen and (min-width: 800px) { @content; }
+  }
+  @else {
+    @media only screen and (max-width: #{$format}) { @content; }
+  }
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  overflow: hidden;
+  overflow-y: auto;
+
+  @include media(mobile) {
+    font-size: 0.95em;
+  }
+}
+
+#scroll-indicator {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  text-align: center;
+  z-index: 100;
+  background: #fff url(../img/scroll-indicator.png) no-repeat 50% 60%;
+  background-size: contain;
+  opacity: 0.8;
+  border-radius: 100%;
+}
+
+#scroll-indicator {
+  display: none;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+
+  @include media(desktop) {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+a {
+  color: #36b5ea;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(#000, 0.2);
+
+  @include media(desktop) {
+    &:hover {
+      border-bottom: 1px solid rgba(#000, 0.2);
+      background: rgba(#fff, 0.8);
+    }
+  }
+}
+
+a.tip {
+  color: inherit !important;
+  font-weight: inherit !important;
+  cursor: help;
+  &[href]:not(.image) { cursor: pointer; }
+}
+
+code {
+  background: rgba(#fff, 0.2);
+  font-size: 16px;
+  padding: 3px 8px;
+  border: 1px solid rgba(#fff, 0.2);
+}
+
+h1, h2, h3 {
+ font-family: 'Bitter', 'Charter', sans-serif;
+ font-weight: normal;
+ color: #444;
+ margin-top: 0;
+ line-height: 1.4;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+  margin-bottom: 1.2em;
+
+  @include media(mobile) {
+    margin-bottom: 0.5em;
+    font-size: 3em;
+  }
+}
+
+section {
+  position: relative;
+  clear: both;
+  padding: 10% 0;
+}
+
+section .wrapper {
+  position: relative;
+}
+
+p {
+  margin-bottom: 0;
+  font-size: 1.125em;
+
+  @include media(mobile) {
+    font-size: 1em;
+  }
+}
+
+section#hello {
+  min-height: 370px;
+
+  @include media(320px) {
+    padding-top: 0;
+  }
+
+  @include media(desktop) {
+    padding-bottom: 15%;
+
+    h1 {
+      font-size: 5em;
+    }
+
+    p, h3 {
+      margin-left: 300px;
+    }
+  }
+
+  h3 {
+    margin-top: 2em;
+  }
+
+  img {
+    border-radius: 100%;
+    float: left;
+    width: 250px;
+    max-width: 250px;
+    margin-right: 40px;
+    margin-top: -40px;
+
+    @include media(mobile) {
+      float: none;
+      display: block;
+      width: 60%;
+
+      margin: 0 auto;
+    }
+  }
+}
+
+section#history {
+  background: #F5F1E5;
+
+  .timeline {
+    margin: 50px 0;
+  }
+
+  h2 span {
+    color: rgba(#000, 0.4);
+  }
+
+  @include media(dekstop) {
+    p {
+      font-size: 1.2em;
+    }
+  }
+
+  dt {
+    font-family: 'Bitter', 'Charter', sans-serif  ;
+    font-size: 1.125em;
+    color: #666;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: #FFF;
+    border-radius: 100%;
+    border: 2px solid #F5F1E5 - 10;
+    float: left;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding-top: 25px;
+    position: relative;
+    top: 5px;
+    z-index: 10;
+
+    @include media(mobile) {
+      float: none;
+      display: block;
+      margin-left: 20px;
+    }
+  }
+
+  dd {
+    margin-left: 120px;
+    color: #F5F1E5 - 140;
+
+    @include media(mobile) {
+      margin: 20px 0 20px 20px;
+    }
+  }
+
+  dl {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  dl:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    border-left: 4px solid #F5F1E5 - 10;
+    display: block;
+    width: 0;
+    top: 0;
+    bottom: -60px;
+    margin-top: 10px;
+    margin-left: 38px;
+
+    @include media(mobile) {
+      margin: 0;
+      bottom: -60px;
+    }
+  }
+
+  @include media(mobile) {
+    dl:after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      border-top: 4px solid #F5F1E5 - 10;
+      display: block;
+      width: 30px;
+      top: 42px;
+    }
+  }
+
+  dl:last-child:before {
+    display: none;
+
+    @include media(mobile) {
+      display: block;
+      bottom: 0;
+    }
+  }
+}
+
+section#priorities {
+  background: #0C5B94 url("../img/blacktocaster.jpg") 20% 60%;
+  background-size: cover;
+  text-shadow: 0 1px 1px rgba(#000, 0.5);
+  color: #95B9C2 + 100;
+
+  ul {
+    list-style: none;
+    margin: 0 0 100px 0;
+    padding: 0;
+    text-align: center;
+
+    @include media(mobile) {
+      margin-bottom: 3em;
+    }
+
+    li {
+      vertical-align: middle;
+      display: inline-block;
+      background: #fff;
+      border-radius: 100%;
+      font-size: 70px;
+      width: 1.8em;
+      height: 1.8em;
+      margin-right: 50px;
+      text-align: center;
+
+      &:before {
+        color: #AEBEBB - 130;
+        text-shadow: none;
+        margin-top: 0.39em;
+      }
+
+      &:last-child { margin-right: 0; }
+
+      @include media(mobile) {
+        font-size: 2.8em;
+        margin-right: 0.5em;
+      }
+    }
+
+    li.icon-bicycle:before {
+      margin-left: -0.3em;
+    }
+  }
+
+  a {
+    color: #36b5ea + 40;
+    border-color: rgba(#fff, 0.5);
+
+    @include media(desktop) {
+      &:hover {
+        background-color: rgba(#fff, 0.2);
+      }
+    }
+  }
+}
+
+section#developer-tools {
+  background: #1F4B94 url("../img/blueprint.png");
+  color: #fff;
+
+  p {
+    text-shadow: 0 1px 1px rgba(#000, 0.5);
+  }
+
+  a {
+    color: #36b5ea + 40;
+    border-color: rgba(#fff, 0.5);
+
+    @include media(desktop) {
+      &:hover {
+        background-color: rgba(#fff, 0.2);
+      }
+    }
+  }
+
+  h2 {
+    color: rgba(#fff, 0.7);
+    margin-bottom: 2em;
+    text-align: center;
+    font-style: italic;
+
+    em {
+      font-style: normal;
+      color: #fff;
+      margin-top: 0.3em;
+      font-size: 3.2em;
+      line-height: 1.2;
+      display: block;
+      text-align: center;
+      text-shadow: 0 1px 0 rgba(#000, 0.2), 0 3px 0 #93abcb - 20, 0 5px 1px rgba(#000, 0.2);
+    }
+
+    @include media(mobile) {
+      font-size: 1.2em;
+      span.brackets { display: none; }
+    }
+
+    @include media(desktop) {
+      em { font-size: 3.7em; }
+    }
+  }
+}
+
+section#love {
+  background: url(../img/noir.jpg) center bottom no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  a {
+    color: #36b5ea + 40;
+    border-color: rgba(#fff, 0.5);
+
+    @include media(desktop) {
+      &:hover {
+        background-color: rgba(#fff, 0.2);
+      }
+    }
+  }
+
+  p {
+    text-shadow: 0 1px 1px rgba(#000, 0.8);
+  }
+
+  [class*="icon-"] {
+    font-size: 100px;
+  }
+
+  header {
+    position: relative;
+    text-align: center;
+    font-size: 100px;
+    margin: 0.5em auto;
+
+    @include media(mobile) {
+      font-size: 55px;
+    }
+
+    .icon-github, .icon-apple {
+      font-size: 1em;
+      display: inline-block;
+      width: 3em;
+      height: 3em;
+      background: rgba(#fff, 0.2);
+      border-radius: 100%;
+      text-align: center;
+      box-sizing: border-box;
+      position: relative;
+
+      &:before {
+        position: absolute;
+      }
+    }
+
+    .icon-apple {
+      margin-left: -1.4em;
+    }
+
+    .icon-github:before {
+      font-size: 1.2em;
+      top: 0.8em;
+      left: 0.1em;
+    }
+
+    .icon-apple:before {
+      top: 0.94em;
+      right: 0.2em;
+      font-size: 1.1em;
+
+      @include media(mobile) {
+        top: 0.9em
+      }
+    }
+
+    .icon-heart {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -1em;
+      margin-left: -0.7em;
+      color: #ffb7ed;
+      font-size: 0.8em;
+    }
+  }
+}
+
+section#contact {
+  h1 {
+    font-size: 3em;
+    text-align: left;
+  }
+
+  h1 span {
+    font-family: sans-serif;
+    font-size: 0.5em;
+    vertical-align: super;
+  }
+
+  ul.contact {
+    list-style: none;
+    margin: 40px 0;
+    padding: 0;
+    font-size: 16px;
+
+    li {
+      margin-bottom: 10px;
+      vertical-align: middle;
+    }
+
+    li:before {
+      font-size: 24px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.bg-credit {
+  font-size: 0.7em;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+
+  @include media(mobile) {
+    display: none;
+  }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   The mug
+   ========================================================================== */
+
+#mug {
+  background: url(../img/mug.png) no-repeat;
+  width: 400px;
+  height: 340px;
+  background-size: contain;
+  position: relative;
+  margin: 0 auto 50px auto;
+  left: 40px;
+
+  #octolatte {
+    position: absolute;
+    top: 34px;
+    left: 34px;
+    width: 245px;
+    height: 245px;
+    background: url(../img/octolatte.png) no-repeat;
+    background-size: cover;
+  }
+
+  @include media(mobile) {
+    left: 0;
+    width: 340px;
+    height: 280px;
+
+    #octolatte {
+      width: 210px;
+      height: 210px;
+      left: 29px;
+      top: 27px;
+    }
+  }
+
+  .credit {
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: 320px;
+    left: -45px;
+    color: rgba(#fff, 0.8);
+
+    @include media(mobile) {
+      top: 260px;
+      left: -35px;
+    }
+
+    a {
+      color: rgba(#fff, 0.5);
+      &:hover { color: #fff; }
+    }
+  }
+}
+
+$maxY: 6deg;
+
+#octolatte.up {
+  -webkit-transform: perspective(400px) rotateX($maxY);
+}
+#octolatte.down {
+  -webkit-transform: perspective(400px) rotateX(-$maxY);
+}
+#octolatte.still {
+  -webkit-transform: perspective(400px) rotateX(0deg) !important;
+}
+#octolatte {
+  // -webkit-transition: -webkit-transform 0.2s ease-out;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 5.5s;
+  -webkit-animation-iteration-count: 1;
+}
+
+@mixin wiggle($bool: true) {
+  @for $p from 0 through 100 {
+    @if $p % 5 == 0 {
+      $factor: ((100 - $p) / 100);
+      $factor: $factor * ($factor / 1.5);
+      $rotation: $maxY * $factor;
+      $bool: not($bool);
+      @if $bool { $rotation: $rotation * -1; }
+
+      #{$p + '%'} { -webkit-transform: perspective(400px) rotateX($rotation); }
+    }
+  }
+}
+
+@-webkit-keyframes wiggleup {
+  @include wiggle(true);
+}
+
+@-webkit-keyframes wiggledown {
+  @include wiggle(false);
+}
